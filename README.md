@@ -10,23 +10,12 @@ They can be installed using `pip install -r requirements.txt`.
 
 ## How to Run
 
-### Individual algorithms
-* Hedge: `python sage_hedge.py with base_config method='METHOD_NAME' -p`
-* OCO: `python sage_oco.py with base_config -p`
-* FTPL: `python ftpl.py with base_config -p`
+### Clean Data
 
-### Variants of k-experts
-* Sum-rewards (k-sets): `python sum_rewards.py with base_config dataset='DATASET_NAME' -p`
-* Pairwise-rewards: `python pairwise_rewards.py with base_config dataset='DATASET_NAME' -p`
-* Max-rewards: `python scratch.py with base_config dataset='DATASET_NAME' sample='top' -p`
-* Monotone-rewards: `python scratch.py with base_config dataset='DATASET_NAME' nfiles=1000 -p`
+### Price of Universal Feasibility and Impact of increasing m.
 
 ### Camera ready Plots
-* Regret for Sum-rewards/Pairwise-rewards: `python getplots_sum_rewards_regret.py`
-* Regret for Max-rewards: `python getplots_max_rewards_regret.py`
-* Hit Rates for Sum-rewards and Monotone-rewards: `python getplots_hitrates.py`
 
-The log files are saved in `./logs/`, and plots are saved in `./figures/`. Please refer to the paper for the details of the hyperparameters for each experiment.
 
 ## Citation
 If you find this repo useful in your research, please consider citing the following paper:
