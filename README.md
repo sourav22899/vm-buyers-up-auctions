@@ -1,8 +1,8 @@
 # vm-buyers-up-auctions
 
-This is the official code repo for [Bidding in Uniform Price Auctions for Value Maximizing Buyers](https://arxiv.org/abs/2406.03674). 
+This is the official code repo for [Learning Safe Strategies for Value Maximizing Buyers in Uniform Price Auctions](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5271846). 
 
-In this paper, we study the problem of bidding in uniform price auctions widely used in practice. Although these auctions are non-truthful for bidders with quasilinear utility functions, several empirical findings suggest that the auction format induces truthful bidding from the bidders. We attribute this difference in theory and practice to the assumption of the behavioral model of the bidders. In this pursuit, we study uniform price auctions in a repeated setting from the perspective of a value-maximizing buyer who aims to maximize their acquired cumulative value across T rounds, subject to per-round return-on-investment (RoI) constraints. For a RoI-constrained, value-maximizing buyer, we study a generalized version of the uniform bidding format, commonly used in practice, which we term as m-uniform bidding. To characterize the optimal m-uniform bid, we introduce and study the notion of universally feasible (UF) bidding policies, which are robust, meaning that RoI feasibility is obtained regardless of the competitors' bids. We show that the optimal class of UF bidding policies is essentially a generalization of truthful bidding policies, which depends only on the valuation curve of the bidder and target RoI. To measure the performance of UF bidding policies against the optimal bidding policy that is not necessarily UF, we introduce a metric called the Price of Universal Feasibility (PoUF) and establish that PoUF is at most 2, irrespective of m and the upper bound is tight. We further compare the generalized m-uniform bidding interface against the classical uniform bidding format under which m=1, showing the total value under m-uniform bidding increases at most by a factor of m. Numerical simulations on semi-synthetic data demonstrate that UF bidding policies perform significantly better than the derived theoretical bounds.
+We study the bidding problem in repeated uniform price multi-unit auctions from the perspective of a single value-maximizing buyer who aims to maximize their cumulative value over T rounds while adhering to return-on-investment (RoI) constraints in each round. Buyers adopt m-uniform bidding format, where they submit m bid-quantity pairs (b, q) to demand q units at bid b. We introduce safe bidding strategies as those that satisfy RoI constraints in every auction, regardless of competing bids. We show that these strategies depend only on the bidder's valuation curve, and the bidder can focus on a finite subset of this class without loss of generality. While the number of strategies in this subset is exponential in m, we develop a polynomial-time algorithm to learn the optimal safe strategy that achieves sublinear regret in the online setting, where regret is measured against a clairvoyant benchmark that knows the competing bids a priori and selects a fixed hindsight optimal safe strategy. We then evaluate the performance of safe strategies against a clairvoyant that selects the optimal strategy from a richer class of strategies in the online setting. In this scenario, we compute the richness ratio, α ∈ (0, 1] for the class of strategies chosen by the clairvoyant and show that our algorithm, designed to learn safe strategies, achieves α-approximate sublinear regret against these stronger benchmarks. Experiments on semi-synthetic data from real-world auctions show that safe strategies substantially outperform the derived theoretical bounds, making them quite appealing in practice.
 
 ## Requirements
 All the requirements are mentioned in `requirements.txt`. They can be installed using `!pip install -r requirements.txt`.
@@ -31,10 +31,10 @@ The generated individual bid data is stored as `allbids_new.pkl`. The experiment
 If you find this repo useful in your research, please consider citing the following paper:
 
 ```
-@article{golrezaei2024bidding,
-  title={Bidding in Uniform Price Auctions for Value Maximizing Buyers},
+@article{golrezaei2025learning,
+  title={Learning Safe Strategies for Value Maximizing Buyers in Uniform Price Auctions},
   author={Golrezaei, Negin and Sahoo, Sourav},
-  journal={arXiv preprint arXiv:2406.03674},
-  year={2024}
+  journal={Available at SSRN 5271846},
+  year={2025}
 }
 ```
